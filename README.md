@@ -45,6 +45,7 @@
 1. **Tower of Hanoi**
 2. **N-Queens Problem**
 3. **Permutations and Combinations**
+4. **Recursive Binary Search**
 
 ## Stacks and Queues
 
