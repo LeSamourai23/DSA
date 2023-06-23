@@ -10,9 +10,9 @@
 1. **Bubble Sort $[O(n^2)]$**
 2. **Selection Sort $[O(n^2)]$**
 3. **Insertion Sort $[O(n^2)]$**
-4. **********************Merge Sort $[O(n\ log(n))]$**
-5. ********************Quick Sort $[O(n\ log(n))]$**
-6. ******************Heap Sort $[O(n\ log(n))]$**
+4. **Merge Sort $[O(n\ log(n))]$**
+5. **Quick Sort $[O(n\ log(n))]$**
+6. **Heap Sort $[O(n\ log(n))]$**
 
 ## Array
 
@@ -96,7 +96,7 @@
 ## Dynamic Programming (Overlapping Subproblems and Optimal Substructure)
 
 1. **********************************Top Down (Recursion + Memoization)**********************************
-2. ******************Bottom U[ (Tabulation- Create an Array from Scratch)******************
+2. ******************Bottom Up [ (Tabulation- Create an Array from Scratch)******************
 
 ## Graph
 
