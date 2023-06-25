@@ -1,2 +1,0 @@
-        if(swapped==False):
-            break
