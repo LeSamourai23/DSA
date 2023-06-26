@@ -1,0 +1,1 @@
+//Do after bitwise manipulation
