@@ -1,3 +1,4 @@
+/.vscode
 /1. Searching/BinarySearch.exe
 /1. Searching/LinearSearch.exe
 /1. Searching/tempCodeRunnerFile.cpp
@@ -8,3 +9,16 @@
 /2. Sorting/InsertionSort.exe
 /2. Sorting/MergeSort.exe
 /2. Sorting/QuickSort.exe
+/3. Array/2Pointers.exe
+/3. Array/ArrayReversal.exe
+/3. Array/ArrayRotation.exe
+/3. Array/KadanesAlgorithm.exe
+/3. Array/SlidingWindow.exe
+/3. Array/SubArray.exe
+/3. Array/Subsequence.exe
+/3. Array/tempCodeRunnerFile.py
+/4. 2D Array/InputOutput.exe
+/4. 2D Array/ReverseMatrix.exe
+/4. 2D Array/SpiralPrinting.exe
+/4. 2D Array/Transpose.exe
+/4. 2D Array/InputOutput.exe
