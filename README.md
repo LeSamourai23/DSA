@@ -40,9 +40,9 @@
 
 ## Recursion and Backtracking
 
-1. **Tower of Hanoi**
-2. **N-Queens Problem**
-3. **Permutations and Combinations**
+1. **Tower of Hanoi $[O(2^n)]$**
+2. **Rat in a Maze**
+3. **N-Queens Problem**
 4. **Recursive Binary Search**
 
 ## Stacks and Queues

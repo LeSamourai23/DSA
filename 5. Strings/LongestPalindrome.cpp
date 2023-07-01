@@ -18,7 +18,7 @@ int longestPalindrome(std::string S)
     int start = 0;
     int maxLength = 1;
 
-    for (int i = 0; i < S.length(); i++)
+    for (int i = 0  ; i < S.length(); i++)
     {
         for (int j = i; j < S.length(); j++)
         {
