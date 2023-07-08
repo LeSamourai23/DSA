@@ -3,7 +3,7 @@
 struct Node
 {
     int Value;
-    Node *Link;
+    Node *Next;
 };
 
 typedef Node *nodePtr;
@@ -13,41 +13,41 @@ void PrintList(nodePtr n)
     while (n != NULL)
     {
         std::cout << n->Value << std::endl;
-        n = n->Link;
+        n = n->Next;
     }
 }
 
-void InsertNodeAtFront(Node**head, int value)
+void InsertNodeAtFront(Node **head, int value)
 {
     nodePtr newNode = new Node();
 
     newNode->Value = value;
-    newNode->Link = *head;
+    newNode->Next = *head;
 
-    *head= newNode;
+    *head = newNode;
 }
 
-void InsertNodeAtTheLast(Node**head, int value)
+void InsertNodeAtTheLast(Node **head, int value)
 {
     nodePtr newNode = new Node();
 
     newNode->Value = value;
-    newNode->Link = NULL;
+    newNode->Next = NULL;
 
-    if(*head == NULL)
+    if (*head == NULL)
     {
         *head = newNode;
         return;
     }
 
-    Node* last = *head;
+    Node *last = *head;
 
-    while(last->Link!=NULL)
+    while (last->Next != NULL)
     {
-        last = last->Link;
+        last = last->Next;
     }
 
-    last->Link = newNode;
+    last->Next = newNode;
 }
 
 int main()
@@ -60,9 +60,9 @@ int main()
     second->Value = 2;
     third->Value = 3;
 
-    head->Link = second;
-    second->Link = third;
-    third->Link = NULL;
+    head->Next = second;
+    second->Next = third;
+    third->Next = NULL;
 
     InsertNodeAtFront(&head, -1);
     InsertNodeAtTheLast(&third, 4);
