@@ -1,85 +1,73 @@
 #include <iostream>
 
-struct Node {
-    int data;
-    Node* next;
-
-    Node(int value) : data(value), next(nullptr) {}
+struct Node
+{
+    int Value;
+    Node *Link;
 };
 
-class LinkedList {
-private:
-    Node* head;
-    Node* tail;
+typedef Node *nodePtr;
 
-public:
-    LinkedList() : head(nullptr), tail(nullptr) {}
+void PrintList(nodePtr n)
+{
+    while (n != NULL)
+    {
+        std::cout << n->Value << std::endl;
+        n = n->Link;
+    }
+}
 
-    ~LinkedList() {
-        while (head != nullptr) {
-            Node* temp = head;
-            head = head->next;
-            delete temp;
-        }
+void InsertNodeAtFront(Node**head, int value)
+{
+    nodePtr newNode = new Node();
+
+    newNode->Value = value;
+    newNode->Link = *head;
+
+    *head= newNode;
+}
+
+void InsertNodeAtTheLast(Node**head, int value)
+{
+    nodePtr newNode = new Node();
+
+    newNode->Value = value;
+    newNode->Link = NULL;
+
+    if(*head == NULL)
+    {
+        *head = newNode;
+        return;
     }
 
-    void pushBack(int value) {
-        Node* newNode = new Node(value);
+    Node* last = *head;
 
-        if (head == nullptr) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            tail->next = newNode;
-            tail = newNode;
-        }
+    while(last->Link!=NULL)
+    {
+        last = last->Link;
     }
 
-    void popBack() {
-        if (isEmpty()) {
-            std::cout << "Error: Cannot pop from an empty list.\n";
-            return;
-        }
+    last->Link = newNode;
+}
 
-        if (head == tail) {
-            delete tail;
-            head = nullptr;
-            tail = nullptr;
-        } else {
-            Node* temp = head;
-            while (temp->next != tail) {
-                temp = temp->next;
-            }
-            delete tail;
-            tail = temp;
-            tail->next = nullptr;
-        }
-    }
+int main()
+{
+    nodePtr head = new Node();
+    nodePtr second = new Node();
+    nodePtr third = new Node();
 
-    bool isEmpty() const {
-        return head == nullptr;
-    }
+    head->Value = 1;
+    second->Value = 2;
+    third->Value = 3;
 
-    void print() const {
-        Node* temp = head;
-        while (temp != nullptr) {
-            std::cout << temp->data << " ";
-            temp = temp->next;
-        }
-        std::cout << "\n";
-    }
-};
+    head->Link = second;
+    second->Link = third;
+    third->Link = NULL;
 
-int main() {
-    LinkedList myList;
-    myList.pushBack(1);
-    myList.pushBack(2);
-    myList.pushBack(3);
+    InsertNodeAtFront(&head, -1);
+    InsertNodeAtTheLast(&third, 4);
 
-    myList.print();  // Output: 1 2 3
-
-    myList.popBack();
-    myList.print();  // Output: 1 2
+    PrintList(head);
 
     return 0;
 }
