@@ -17,7 +17,7 @@ void PrintList(nodePtr n)
     }
 }
 
-void InsertNodeAtFront(Node **head, int value)
+void InsertNodeAtFront(nodePtr *head, int value)
 {
     nodePtr newNode = new Node();
 
@@ -27,7 +27,7 @@ void InsertNodeAtFront(Node **head, int value)
     *head = newNode;
 }
 
-void InsertNodeAtTheLast(Node **head, int value)
+void InsertNodeAtTheLast(nodePtr *head, int value)
 {
     nodePtr newNode = new Node();
 

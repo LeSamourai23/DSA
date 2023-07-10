@@ -1,5 +1,4 @@
 #include <iostream>
-
 struct Node
 {
     int Value;
@@ -8,7 +7,7 @@ struct Node
 
 typedef Node *nodePtr;
 
-void PrintList(nodePtr n)
+void PrintLinkedList(nodePtr n)
 {
     while (n != NULL)
     {
@@ -17,23 +16,23 @@ void PrintList(nodePtr n)
     }
 }
 
-void Reverse(Node**head)
+void Reverse(nodePtr *head)
 {
     nodePtr current = *head;
-    nodePtr prev = NULL;
-    nodePtr next = NULL;
+    nodePtr next = 0;
+    nodePtr prev = 0;
 
-    while(current != NULL)
+    while (current != 0)
     {
-        next= current->Next;
+        next = current->Next;
         current->Next = prev;
 
-        prev= current;
-        current= next;
+        prev = current;
+        current = next;
     }
-    *head = prev;
-}
 
+    *head= prev;
+}
 
 int main()
 {
@@ -51,7 +50,7 @@ int main()
 
     Reverse(&head);
 
-    PrintList(head);
+    PrintLinkedList(head);
 
     return 0;
 }

@@ -1,7 +1,0 @@
-arr = [64, 34, 25, 12, 22, 11, 90]
-
-n = len(arr)
-
-SelectionSort(arr, n)
-
-print(arr)
