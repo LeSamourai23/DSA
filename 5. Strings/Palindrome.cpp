@@ -2,14 +2,27 @@
 #include <conio.h>
 #include <stdio.h>
 #include <string>
+#include <cctype>
 
 int Palindrome(std::string S)
 {
     int n = S.length();
 
+    std::string modStr;
+
+    for (char c : S)
+    {
+        if (std::isalnum(c))
+        {
+            modStr += std::tolower(c);
+        }
+    }
+
+    n = modStr.length(); 
+
     for (int i = 0; i < n / 2; i++)
     {
-        if (S[i] != S[n - i - 1])
+        if (modStr[i] != modStr[n - i - 1])
         {
             return 0;
         }
@@ -20,7 +33,7 @@ int Palindrome(std::string S)
 
 int main()
 {
-    std::string str = "helpleh";
+    std::string str = "0P";
 
     int res = Palindrome(str);
 
@@ -30,7 +43,7 @@ int main()
     }
     else
     {
-        std::cout<< "The string is not a palindrome";
+        std::cout << "The string is not a palindrome";
     }
 
     return 0;

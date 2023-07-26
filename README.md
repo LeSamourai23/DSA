@@ -95,7 +95,7 @@
 ## Dynamic Programming (Overlapping Subproblems and Optimal Substructure)
 
 1. **********************************Top Down (Recursion + Memoization)**********************************
-2. ******************Bottom Up [ (Tabulation- Create an Array from Scratch)******************
+2. ******************Bottom Up (Tabulation- Create an Array from Scratch)******************
 
 ## Graph
 
