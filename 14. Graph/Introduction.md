@@ -62,3 +62,7 @@ Here, n= 5 and m= 6. Rest represent edges (like 2 is connected to 1)
 1. **Matrix method**:
    Space Complexity: O(N^2)
    Time Complexity: O(N)
+
+2. **Vector Method**:
+   Space Complexity: O(2N)
+   Time Complexity: O(N)
