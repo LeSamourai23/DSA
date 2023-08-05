@@ -17,6 +17,12 @@ int main()
         adj[u].push_back(v);
         adj[v].push_back(u);
 
+        /*
+            In case of directed graph: u->v
+
+            we won't require: adj[v].push_back(u);
+        */
+
         return 0;
     }
 }
